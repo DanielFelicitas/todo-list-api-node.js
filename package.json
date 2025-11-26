@@ -1,18 +1,22 @@
 {
   "name": "todo-list-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "todo application used node.js on backend",
   "main": "server.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "nodemon ./src/server.js",
+    "dev": "nodemon ./src/server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Daniel Felicitas",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^3.0.3",
     "cors": "^2.8.5",
     "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
     "mongoose": "^9.0.0"
   }
 }
