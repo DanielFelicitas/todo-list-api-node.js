@@ -6,7 +6,7 @@ import authRoutes from './routes/authRoutes.js'
 import todoRoutes from './routes/todoRoutes.js'
 import authMiddleware from './middleware/authMiddleware.js';
 import cors from 'cors';
-
+    
 dotenv.config();
 const app = express()
 const PORT = process.env.PORT || 5003
@@ -27,10 +27,11 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'))
 })
 
+
 // Routes
 app.use('/auth', authRoutes)
 app.use('/todos', authMiddleware, todoRoutes)
 
 app.listen(PORT, () => {
-    console.log(`Server has started on port: ${PORT}`)
+    console.log(`Server has started on port: http://localhost:${PORT}`)
 })
