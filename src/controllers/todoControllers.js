@@ -29,7 +29,6 @@ export const updateTodo = async (req, res) =>{
      res.json({ message: "Todo updated" });
 }
 
-
 export const deleteTodo = async (req, res) =>{   
     const { id } = req.params;
     const userId = req.userId;

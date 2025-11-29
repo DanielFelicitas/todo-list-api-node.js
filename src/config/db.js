@@ -1,6 +1,5 @@
 import { DatabaseSync } from "node:sqlite";
 
-// Use a file instead of in-memory to persist data
 const db = new DatabaseSync("./database.sqlite"); 
 
 
