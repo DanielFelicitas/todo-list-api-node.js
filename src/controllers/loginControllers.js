@@ -44,7 +44,7 @@ export const registerControllers = async (req, res) => {
         insertTodo.run(result.lastInsertRowid, defaultTodo)
 
         // create a token
-        const token = jwt.sign({ id: result.lastInsertRowid }, process.env.JWT_SECRET, { expiresIn: '24h' })
+        const token = jwt.sign({ id: result.lastInsertRowid }, process.env.JWT_SECRET, { expiresIn: '1s' })
         res.json({ token })
     } catch (err) {
         console.log(err.message);

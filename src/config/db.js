@@ -1,9 +1,9 @@
 import { DatabaseSync } from "node:sqlite";
 
 // Use a file instead of in-memory to persist data
-const db = new DatabaseSync("./database.sqlite"); // <-- file will be created in project folder
+const db = new DatabaseSync("./database.sqlite"); 
 
-// Create users table if it doesn't exist
+
 db.exec(`
   CREATE TABLE IF NOT EXISTS users (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -12,7 +12,6 @@ db.exec(`
   )
 `);
 
-// Create todos table if it doesn't exist
 db.exec(`
   CREATE TABLE IF NOT EXISTS todos (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
